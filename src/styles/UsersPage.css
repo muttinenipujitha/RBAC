@@ -1,0 +1,140 @@
+/* Main Container */
+.users-page {
+    padding: 20px;
+    background-color: #f7f7f7; /* Light Grey Background */
+    min-height: 100vh;
+  }
+  
+  /* Heading Styling with Fade-In Effect */
+  .users-page,.per-page,.role-page, h1 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Add User Button */
+  button {
+    background-color: #6f84f8; /* Violet */
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #4a61f4;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  th {
+    background-color: #6f84f8;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  td {
+    background-color: #fff;
+    color: #4a4a4a;
+  }
+  
+  /* Table Row Hover Effect */
+  tr:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  /* Modal Background */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOverlay 0.3s ease-out;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  /* Modal Close Button */
+  .modal-close {
+    background-color: #ff5c5c;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-close:hover {
+    background-color: #ff3d3d;
+  }
+  
+  /* Fade In Animation for Modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Up Animation for Modal */
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Fade In Animation for Modal Overlay */
+  @keyframes fadeInOverlay {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

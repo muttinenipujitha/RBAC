@@ -1,0 +1,94 @@
+/* Dashboard Container */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7; /* Neutral light grey */
+    color: #4a4a4a; /* Neutral dark grey */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Heading Styling with Zoom In Effect */
+  .dashboard h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(136, 14, 136); /* Violet color matching Navbar */
+    animation: zoomIn 1.2s ease-out forwards;
+  }
+  
+  /* Paragraph Styling with Slide Up Effect */
+  .dashboard p {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    color: #4a4a4a;
+    animation: slideUp 1.5s ease-out forwards 0.3s;
+    opacity: 0; /* Starts invisible for animation */
+  }
+  
+  /* Decorative Circle for Subtle Animation */
+  .dashboard::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(111, 132, 248, 0.1); /* Soft violet glow */
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+  
+  /* Zoom In Animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Floating Circle Animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .dashboard h1 {
+      font-size: 2.5rem;
+    }
+  
+    .dashboard p {
+      font-size: 1.2rem;
+    }
+  }
+  

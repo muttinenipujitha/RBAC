@@ -1,0 +1,130 @@
+/* General Modal Styling */
+.modal {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    width: 400px;
+    max-width: 90%;
+    animation: fadeIn 0.3s ease-out;
+    
+  }
+  
+  /* Modal Header */
+  .modal h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Input Fields */
+  .modal input,
+  .modal select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modal input:focus,
+  .modal select:focus {
+    border-color: #6f84f8;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .modal button {
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .modal button + button {
+    margin-left: 15px; /* Adds gap only between buttons */
+  }
+  .modal button:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal button:first-child {
+    background-color: #6f84f8;
+    color: white;
+  }
+  
+  .modal button:last-child {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  /* Close Modal Button */
+  .modal button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .modal button:last-child:hover {
+    background-color: #e53935;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    animation: fadeInOverlay 0.3s ease-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes fadeInOverlay {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .modal {
+      width: 90%;
+    }
+    .modal h2 {
+      font-size: 1.2rem;
+    }
+    .modal button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  

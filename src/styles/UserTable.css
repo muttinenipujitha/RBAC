@@ -1,0 +1,77 @@
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Table Header Styling */
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  th {
+    background-color: #6f84f8; /* Violet */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  td {
+    background-color: #fafafa; /* Light grey */
+    color: #333;
+  }
+  
+  /* Hover Effect on Table Rows */
+  tr:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  /* Action Button Styling */
+  button {
+    background-color: #6f84f8; /* Violet */
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #4a61f4;
+    transform: scale(1.05);
+  }
+  
+  /* Table Container Styling */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  /* Media Query for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.9rem;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+  
